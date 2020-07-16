@@ -1,0 +1,12 @@
+{% extends 'weather_home/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+    <h2>Logged Out Succesfully</h2>
+    <div class="border-top pt-3">
+        <small class="text-muted"></small>
+            <a href="{% url 'login' %}">Log In Again</a>
+        </small>
+    </div>
+{% endblock content %}

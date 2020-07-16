@@ -1,0 +1,89 @@
+{% extends 'weather_home/base.html' %}
+{% load static %}
+
+{% block content %}
+    <article class="media content-section">
+        <div class="media-body">
+        <div class="article-metadata">
+            <a class="mr-2" href="#">Current Weather</a>
+            <small class="text-muted">{{ data.time }}</small>
+        </div>
+        <h2><a class="article-title" href="#"></a></h2>
+        <img src="http://openweathermap.org/img/wn/{{ data.icon }}@2x.png" style="float:left;"/>
+        <br>
+        <h3>{{ data.temp }}° {{ data.condition }}</h3>
+        <p><b>Feels Like: </b>{{data.feels_like}}° &nbsp <b>High: </b>{{data.high}}° &nbsp <b>Low: </b>{{data.low}}°</p>
+        <img src="{% static 'weather_home/img/blank.png' %}" style="float:left;"/>
+        <ul style="list-style: none;" class="text-muted">
+            <li>Sunrise to Sunset: {{ data.sunrise }} - {{ data.sunset }}</li>
+            <li>UVI: {{ data.uvi }}</li>
+            <li>Wind: {{ data.wind }} m/s</li>
+        </ul>
+    </article>
+
+    <article class="media content-section">
+        <div class="media-body">
+        <div class="article-metadata">
+            <a class="mr-2" href="#">Clothing</a>
+            <small class="text-muted">{{ data.time_list.0 }}</small>
+        </div>
+        <ul>
+            {% for k in data.clothing_list.0 %}
+            <li>{{ k }}</li>
+            {% endfor %}
+        </ul>
+    </article>
+
+    <article class="media content-section">
+        <div class="media-body">
+        <div class="article-metadata">
+            <a class="mr-2" href="#">Clothing</a>
+            <small class="text-muted">{{ data.time_list.1 }}</small>
+        </div>
+        <ul>
+            {% for k in data.clothing_list.1 %}
+            <li>{{ k }}</li>
+            {% endfor %}
+        </ul>
+    </article>
+
+    <article class="media content-section">
+        <div class="media-body">
+        <div class="article-metadata">
+            <a class="mr-2" href="#">Clothing</a>
+            <small class="text-muted">{{ data.time_list.2 }}</small>
+        </div>
+        <ul>
+            {% for k in data.clothing_list.2 %}
+            <li>{{ k }}</li>
+            {% endfor %}
+        </ul>
+    </article>
+
+    <article class="media content-section">
+        <div class="media-body">
+        <div class="article-metadata">
+            <a class="mr-2" href="#">Clothing</a>
+            <small class="text-muted">{{ data.time_list.3 }}</small>
+        </div>
+        <ul>
+            {% for k in data.clothing_list.3 %}
+            <li>{{ k }}</li>
+            {% endfor %}
+        </ul>
+    </article>
+
+    <article class="media content-section">
+        <div class="media-body">
+        <div class="article-metadata">
+            <a class="mr-2" href="#">Clothing</a>
+            <small class="text-muted">{{ data.time_list.4 }}</small>
+        </div>
+        <ul>
+            {% for k in data.clothing_list.4 %}
+            <li>{{ k }}</li>
+            {% endfor %}
+        </ul>
+    </article>
+
+{% endblock content %}
