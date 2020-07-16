@@ -4,7 +4,7 @@
 
 WeatherPie gives you the current weather and suggests you what to wear based on the forecast.
 
-# Prerequisites
+## Prerequisites
 * [Python 3.8](https://www.python.org/downloads/) or greater
 * [Pipenv](https://pypi.org/project/pipenv/)
 * [OpenWeatherMap API](https://openweathermap.org/api) key
@@ -28,6 +28,7 @@ python
 Set environment variables:
 
 `SECRET_KEY` = generated hex key
+
 `OPEN_WEATHER_API_KEY` = OpenWeatherMap API key
 
 Run Django migrations:
